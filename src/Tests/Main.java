@@ -1,4 +1,6 @@
-public class Main {
+package Tests;
+
+class Main {
 
     int[] getTail(int[] seq) {
 
@@ -16,8 +18,8 @@ public class Main {
 
                 }
 
-                int[] tail = java.util.Arrays.copyOfRange(seq, i + 1, seq.length);
-                return tail;
+                return java.util.Arrays.copyOfRange(seq, i + 1, seq.length);
+
             }
 
             i -= 1;
@@ -43,9 +45,6 @@ public class Main {
 
         }
 
-        if(hasOne && hasFour && !hasElse)
-            return true;
-        else
-            return false;
+        return hasOne && hasFour && !hasElse;
     }
 }
